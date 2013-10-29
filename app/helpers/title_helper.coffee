@@ -1,6 +1,6 @@
 _s = require 'underscore.string'
 
-BASE_TITLE = "My Site"
+BASE_TITLE = "Angular Frappe Seed App"
 
 module.exports = ->
   (title = '') ->
