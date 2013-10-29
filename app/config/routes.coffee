@@ -1,5 +1,5 @@
 module.exports = (app) ->
-  {UsersController, NameController} = app.locals
+  {UsersController, NameController, PartialsController} = app.locals
   {pathRaw} = app.locals.path
 
   app.get pathRaw('index'), (req, res) ->
@@ -10,3 +10,5 @@ module.exports = (app) ->
   app.post pathRaw('user.create'), UsersController.create
 
   app.get '/api/name', NameController.index
+
+  app.get pathRaw('partial.show'), PartialsController.show
